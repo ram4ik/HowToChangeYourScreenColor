@@ -10,7 +10,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        
+        // ZStack could be used for superposinmg views
+        ZStack {
+            
+            //Difine the screen color
+            Color.blue
+            
+            // Extend the screen color to all edges
+                .edgesIgnoringSafeArea(.all)
+            
+            Text("How to Change the screen color and extend to edges")
+                .font(.largeTitle)
+                .fontWeight(.regular)
+                .foregroundColor(.white)
+                .padding()
+                .lineLimit(nil)
+                .multilineTextAlignment(.center)
+        }
     }
 }
 
